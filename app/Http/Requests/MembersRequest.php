@@ -27,6 +27,7 @@ class MembersRequest extends FormRequest
             'name' => 'required',
             'address' => 'required',
             'city' => 'required',
+            'email' => 'required|email|unique:members',
             'phone_number' => 'required|numeric|unique:members',
             'date_of_birth' => 'required|date',
         ];
@@ -35,6 +36,7 @@ class MembersRequest extends FormRequest
             return $rules;
         }else{
             $rules['phone_number'] = 'required|numeric';
+            $rules['email'] = 'required|email';
 
             return $rules;
         }
