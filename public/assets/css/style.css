@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#aside-login-content {
+    /* margin-left: 11rem; */
+    padding: 80px;
+}
+
+#aside-login-content h1 {
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1px;
+    /* or 44px */
+
+    letter-spacing: 0.005em;
+
+    /* Base/Light */
+
+    color: #ffffff;
+}
+
+#aside-login-content p {
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 27px;
+    /* or 27px */
+
+    letter-spacing: 0.005em;
+
+    /* Base/Light */
+
+    color: #ffffff;
+}
+
+#aside-login-content img {
+    width: 100%;
+}
+
+#form-login h3 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+
+    letter-spacing: 0.005em;
+
+    color: #000000;
+}
