@@ -14,7 +14,7 @@ License: For each use you must have a valid license purchased only from above li
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title> Perpustakaan </title>
+		<title> SIMPEL </title>
 		<meta name="description" content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
 		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular 11, VueJs, React, Laravel, admin themes, web design, figma, web development, ree admin themes, bootstrap admin, bootstrap dashboard" />
 		<link rel="canonical" href="Https://preview.keenthemes.com/metronic8" />
@@ -95,7 +95,9 @@ License: For each use you must have a valid license purchased only from above li
                                 <!-- <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1"> -->
 									<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 										<ol class="breadcrumb">
-											
+											@foreach($module as $modules)
+												<li class="breadcrumb-item"><a href="#">{{$modules}}</a></li>
+											@endforeach
 										
 										</ol>
 									</nav>
