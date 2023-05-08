@@ -20,10 +20,24 @@ class BorrowerController extends BaseController
         return view('module.borrower.index');
     }
 
+    public function indexUser(){
+        return view('module.borrower.index2');
+    }
+
     public function datatable(){
         $task = array();
         try {
             $task = $this->orderRepository->getAll();
+        } catch (\Exception $e) {
+            return $this->sendError($e->getMessage(), $e->getMessage(),400);
+        }
+        return $this->sendResponse($task,'Borrower Fetched Success');
+    }
+
+    public function getHistoryByUser() {
+        $task = array();
+        try {
+            $task = $this->orderRepository->getHistoryByUser();
         } catch (\Exception $e) {
             return $this->sendError($e->getMessage(), $e->getMessage(),400);
         }

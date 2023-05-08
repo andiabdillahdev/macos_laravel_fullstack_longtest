@@ -43,8 +43,16 @@ $role = auth()->user()->role;
             @endif
 
             @if($role === 'user')
+
             <div class="menu-item">
-                <a class="menu-link">
+                <a class="menu-link {{ $path[0] == 'dashboard-user' ? 'active' : '' }}" href="{{ url('/dashboard-user') }}">
+                    <span class="menu-icon">
+                    </span>
+                    <span class="menu-title" style="color:#ffffff;">Dashboard</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a class="menu-link {{ $path[0] == 'history' ? 'active' : '' }}" href="{{route('history.index')}}">
                     <span class="menu-icon">
                     </span>
                     <span class="menu-title" style="color:#ffffff;">Riwayat Peminjaman buku</span>
