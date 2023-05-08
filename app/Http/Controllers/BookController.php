@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Requests\BooksRequest;
+use App\Http\Requests\BooksRequest;
 use App\Http\Controllers\BaseController as BaseController;
 use App\Repository\Books\BooksInterface;
 class BookController extends BaseController

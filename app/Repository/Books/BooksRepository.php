@@ -3,28 +3,28 @@
 namespace App\Repository\Books;
 
 use App\Repository\Books\BooksInterface;
-use App\Models\Books;
+use App\Models\Book;
 
 class BooksRepository implements BooksInterface {
     public function getAll(){
-        return Books::select('id','book_number','title','author','year')->latest()->get();
+        return Book::select('id','book_number','title','author','year')->latest()->get();
     }
 
     public function getOne($params){
-        return Books::select('id','book_number','title','author','year')->where('id',$params)->first();
+        return Book::select('id','book_number','title','author','year')->where('id',$params)->first();
     }
 
      public function store($req){
-         return Books::create($req);
+         return Book::create($req);
       
     }
 
      public function update($req, $params){
-        return Books::where('id', $params)
-        ->update($request);
+        return Book::where('id', $params)
+        ->update($req);
     }
 
     public function delete($req, $params){
-        return Books::where('id',$params)->delete();
+        return Book::where('id',$params)->delete();
     }
 }

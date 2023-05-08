@@ -95,9 +95,7 @@ License: For each use you must have a valid license purchased only from above li
                                 <!-- <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1"> -->
 									<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 										<ol class="breadcrumb">
-											@foreach($module as $modules)
-												<li class="breadcrumb-item"><a href="#">{{$modules}}</a></li>
-											@endforeach
+										
 										
 										</ol>
 									</nav>

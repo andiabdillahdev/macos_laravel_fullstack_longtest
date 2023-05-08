@@ -16,7 +16,7 @@ $role = auth()->user()->role;
             </div>
 
             <div class="menu-item">
-                <a class="menu-link">
+                <a class="menu-link" href="{{ route('books.index') }}">
                     <span class="menu-icon">
                     </span>
                     <span class="menu-title" style="color:#ffffff;">Buku</span>

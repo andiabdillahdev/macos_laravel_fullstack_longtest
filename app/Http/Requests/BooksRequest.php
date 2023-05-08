@@ -24,10 +24,9 @@ class BooksRequest extends FormRequest
     public function rules()
     {
         return [
-            'book_number' => 'required|string',
             'title' => 'required',
             'author' => 'required',
-            'year' => 'required'
+            'year' => 'required|date_format:Y'
         ];
     }
 }

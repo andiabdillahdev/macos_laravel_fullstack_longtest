@@ -20,12 +20,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function(){
         Route::get('/dashboard-admin', 'HomeController@dashboard_admin')->name('dashboard.admin');
 
         Route::prefix('books')->group(function () {
-            Route::get('/', 'BookController@index')->name('profile.index');
-            Route::get('/datatable-list', 'BookController@datatable')->name('profile.datatable');
-            Route::post('/store', 'BookController@store')->name('profile.store');
-            Route::get('/show/{params}', 'BookController@show')->name('profile.show');
-            Route::patch('/update/{params}', 'BookController@update')->name('profile.update');
-            Route::delete('/delete/{params}', 'BookController@delete')->name('profile.delete');
+            Route::get('/', 'BookController@index')->name('books.index');
+            Route::get('/datatable-list', 'BookController@datatable')->name('books.datatable');
+            Route::post('/store', 'BookController@store')->name('books.store');
+            Route::get('/show/{params}', 'BookController@show')->name('books.show');
+            Route::put('/update/{params}', 'BookController@update')->name('books.update');
+            Route::delete('/delete/{params}', 'BookController@delete')->name('books.delete');
         });
     });
 
