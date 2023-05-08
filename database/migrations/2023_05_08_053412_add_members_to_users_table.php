@@ -15,8 +15,7 @@ class AddMembersToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->unsignedBigInteger('id_members');
-            $table->foreignId('id_members')->nullable()->constrained('members');
-            
+            $table->foreignId('id_members')->nullable()->default(null)->constrained('members');    
         });
     }
 
