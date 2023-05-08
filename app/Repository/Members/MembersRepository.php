@@ -48,4 +48,8 @@ class MembersRepository implements MembersInterface {
     public function delete($req, $params){
         return Members::where('id',$params)->delete();
     }
+
+    public function getOption(){
+        return DB::table('members')->select('id','name as text')->get();
+    }
 }

@@ -24,9 +24,9 @@ class Control {
             console.log(res);
             $.each(res.data, function (x, y) {
               $("input[name='" + x + "']").val(y);
+              $("select[name='" + x + "']").val(y);
+              $("select[name='" + x + "']").trigger("change");
             });
-            // $("select[name='" + x + "']").val(y);
-            // $("select[name='" + x + "']").trigger("change");
           }
         },
         error: function (xhr) {
@@ -92,12 +92,11 @@ class Control {
       url: url,
       method: "GET",
       success: function (res) {
-        // console.log(res);
-        // $(element).empty().trigger("change");
-        // $(element).val("").trigger("change");
         $(element).each(function () {
           $(this).select2({ data: res.data });
         });
+        // var newOption = new Option(data.text, data.id, false, false);
+        // $("#mySelect2").append(newOption).trigger("change");
       },
       error: function (xhr) {
         alert("gagal");

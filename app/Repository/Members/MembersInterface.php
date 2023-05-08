@@ -9,4 +9,5 @@ interface MembersInterface
     public function store($request); 
     public function update($request, $params);
     public function delete($request, $params);
+    public function getOption();
 }
