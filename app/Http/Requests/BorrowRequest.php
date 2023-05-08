@@ -28,7 +28,6 @@ class BorrowRequest extends FormRequest
             'book_number' => 'required|string',
             'loan_date' => 'required|date',
             'date_of_return' => 'required|date',
-            'status' => 'required'
         ];
     }
 }
