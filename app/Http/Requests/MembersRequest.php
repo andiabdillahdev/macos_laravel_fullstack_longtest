@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Validation\Rule;
 class MembersRequest extends FormRequest
 {
     /**
@@ -23,12 +23,21 @@ class MembersRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        $rules =  [
             'name' => 'required',
             'address' => 'required',
             'city' => 'required',
-            'phone_number' => 'required|numeric',
-            'date_of_birth' => 'required|date'
+            'phone_number' => 'required|numeric|unique:members',
+            'date_of_birth' => 'required|date',
         ];
+
+        if ($this->method() == 'POST') {
+            return $rules;
+        }else{
+            $rules['phone_number'] = 'required|numeric';
+
+            return $rules;
+        }
+        
     }
 }
