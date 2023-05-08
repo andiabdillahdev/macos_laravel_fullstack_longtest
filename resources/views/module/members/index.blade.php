@@ -35,6 +35,7 @@
                                 <th>Alamat</th>
                                 <th>Kota</th>
                                 <th>Nomor telepon</th>
+                                <th>E-mail</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -105,6 +106,13 @@
                     <small class="text-danger address_error"></small>
                 </div>
 
+                <div class="mb-10 hasNone">
+                    <label class="form-label">Email</label>
+                    <input type="text" id="email" class="form-control" name="email" placeholder="Masukkan email">
+                    <small class="text-danger email_error"></small>
+                </div>
+
+
                 <div class="mb-10">
                     <label class="form-label">Kota</label>
                     <input type="text" id="kota" class="form-control" name="city" placeholder="Masukkan Kota">
@@ -141,6 +149,7 @@
 <script>
     let control = new Control();
     $(document).on('click','#button-side-form', function () {
+        $('.hasNone').show();
         control.overlay_form('Tambah','Members');
     })
 
@@ -157,6 +166,7 @@
 
     $(document).on('click','.button-update', function (e) {
         e.preventDefault();
+        $('.hasNone').hide();
         let url = '/members/show/'+$(this).attr('data-id');
         control.overlay_form('Update','Data Anggota', url);
     })
@@ -225,6 +235,8 @@
                 data:'city'
             },{
                 data:'phone_number'
+            },{
+                data:'email'
             },{
                 data:'id'
             }

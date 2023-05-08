@@ -16,7 +16,7 @@ $role = auth()->user()->role;
             </div>
 
             <div class="menu-item">
-                <a class="menu-link" href="{{ route('books.index') }}">
+                <a class="menu-link {{ $path[0] == 'books' ? 'active' : '' }}" href="{{ route('books.index') }}">
                     <span class="menu-icon">
                     </span>
                     <span class="menu-title" style="color:#ffffff;">Buku</span>
@@ -24,7 +24,7 @@ $role = auth()->user()->role;
             </div>
 
             <div class="menu-item">
-                <a class="menu-link">
+                <a class="menu-link {{ $path[0] == 'members' ? 'active' : '' }}" href="{{ route('members.index') }}">
                     <span class="menu-icon">
                     </span>
                     <span class="menu-title" style="color:#ffffff;">Anggota</span>
