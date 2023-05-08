@@ -27,6 +27,15 @@ Route::group(['namespace' => 'App\Http\Controllers'], function(){
             Route::put('/update/{params}', 'BookController@update')->name('books.update');
             Route::delete('/delete/{params}', 'BookController@delete')->name('books.delete');
         });
+
+        Route::prefix('members')->group(function () {
+            Route::get('/', 'MembersController@index')->name('members.index');
+            Route::get('/datatable-list', 'MembersController@datatable')->name('members.datatable');
+            Route::post('/store', 'MembersController@store')->name('members.store');
+            Route::get('/show/{params}', 'MembersController@show')->name('members.show');
+            Route::put('/update/{params}', 'MembersController@update')->name('members.update');
+            Route::delete('/delete/{params}', 'MembersController@delete')->name('members.delete');
+        });
     });
 
     Route::group(['middleware' => ['user']], function() {
