@@ -17,7 +17,6 @@ class MembersRepository implements MembersInterface {
 
      public function store($req){
          return Members::create($req);
-      
     }
 
      public function update($req, $params){
