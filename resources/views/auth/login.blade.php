@@ -13,7 +13,7 @@ License: For each use you must have a valid license purchased only from above li
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="../../../">
-		<title>Login Simpel</title>
+		<title>Login Perpustakaan</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="Simpel" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -61,9 +61,9 @@ License: For each use you must have a valid license purchased only from above li
 									<label class="form-label fs-6 fw-bolder text-dark">Email</label>
 									<!--end::Label-->
 									<!--begin::Input-->
-									<input class="form-control form-control-lg form-control-solid" type="text" name="username" autocomplete="off" />
+									<input class="form-control form-control-lg form-control-solid" type="text" name="email" autocomplete="off" />
 
-								@error('username')
+								@error('email')
 									<div class="error text-danger">{{ $message }}</div>
 								@enderror
 									<!--end::Input-->

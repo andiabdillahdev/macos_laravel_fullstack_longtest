@@ -12,4 +12,12 @@ class HomeController extends BaseController
         }
         return redirect()->route('login');
     }
+
+    public function dashboard_admin(){
+        return view('dashboard.admin');
+    }
+
+    public function dashboard_user(){
+        return view('dashboard.user');
+    }
 }
