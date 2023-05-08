@@ -1,7 +1,4 @@
 @extends('layouts.layout')
-@section('button')
-    <button class="btn btn-primary btn-sm " data-kt-drawer-show="true" data-kt-drawer-target="#side_form" id="button-side-form"><i class="fa fa-plus-circle" style="color:#ffffff" aria-hidden="true"></i> Tambah Data Peminjaman</button>
-@endsection
 @section('content')
 <div class="post d-flex flex-column-fluid" id="kt_post">
 <!--begin::Container-->
@@ -35,7 +32,6 @@
                                 <th>Tanggal peminjaman</th>
                                 <th>Tanggal Pengembalian</th>
                                 <th>Status</th>
-                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,8 +76,6 @@
                 data:'date_of_return'
             },{
                 data:'status'
-            },{
-                data:'id'
             }
         ];
         let columnDefs = [
@@ -96,18 +90,6 @@
                    }
                 },
             },
-            {
-                targets: -1,
-                title: 'Aksi',
-                // width: '15rem',
-                orderable: false,
-                render: function(data, type, full, meta) {
-                    return `
-                       <a href="#" data-id="${data}" data-kt-drawer-show="true" data-kt-drawer-target="#side_form" class="btn btn-warning button-update btn-sm">edit</a>
-                       <a href="#" data-id="${data}" class="btn btn-delete btn-sm btn-danger">hapus</a>
-                        `;
-                },
-            }
         ];
         control.initDatatable('/history/datatable-list',columns,columnDefs);
     })

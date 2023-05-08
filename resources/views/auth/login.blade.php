@@ -15,7 +15,7 @@ License: For each use you must have a valid license purchased only from above li
 	<head><base href="../../../">
 		<title>Login Perpustakaan</title>
 		<meta charset="utf-8" />
-		<meta name="description" content="Simpel" />
+		<meta name="description" content="Perpustakaan" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
