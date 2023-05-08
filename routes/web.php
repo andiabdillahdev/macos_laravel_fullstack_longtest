@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['namespace' => 'App\Http\Controllers'], function(){ 
+    Route::get('/', 'HomeController@index')->name('home.index');
+   Route::get('/login', 'LoginController@show')->name('login');
+   Route::post('/do-login', 'LoginController@login')->name('login.perform');
 });
+
