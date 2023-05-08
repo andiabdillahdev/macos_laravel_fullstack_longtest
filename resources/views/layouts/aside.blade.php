@@ -34,7 +34,7 @@ $role = auth()->user()->role;
             </div>
 
             <div class="menu-item">
-                <a class="menu-link">
+                <a class="menu-link {{ $path[0] == 'borrower' ? 'active' : '' }}" href="{{ route('borrower.index') }}">
                     <span class="menu-icon">
                     </span>
                     <span class="menu-title" style="color:#ffffff;">Peminjaman buku</span>
