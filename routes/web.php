@@ -49,6 +49,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function(){
 
     Route::group(['middleware' => ['user']], function() {
         Route::get('/dashboard-user', 'HomeController@dashboard_user')->name('dashboard.user');
+        Route::prefix('history')->group(function () {
+            Route::get('/', 'BorrowerController@indexUser')->name('history.index');
+            Route::get('/datatable-list', 'BorrowerController@getHistoryByUser')->name('history.datatable');
+        });
     });
 });
 

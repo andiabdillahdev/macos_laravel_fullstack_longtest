@@ -5,6 +5,7 @@ namespace App\Repository\Borrower;
 use App\Repository\Borrower\BorrowerInterface;
 use App\Models\Borrower;
 use DB;
+use Auth;
 class BorrowerRepository implements BorrowerInterface {
 
     public function getAll(){
@@ -14,6 +15,17 @@ class BorrowerRepository implements BorrowerInterface {
         ->join('members','borrower.id_members','=','members.id')
         ->join('books','borrower.book_number','=','books.book_number')
         ->get();
+    }
+
+    public function getHistoryByUser(){
+         return 
+        DB::table('borrower')
+        ->select('borrower.id','borrower.loan_date','borrower.date_of_return','borrower.status','members.name as members','books.title')
+        ->join('members','borrower.id_members','=','members.id')
+        ->join('books','borrower.book_number','=','books.book_number')
+        ->where('borrower.id_members',Auth::user()->id_members)
+        ->get();
+
     }
 
     public function getOne($params){
