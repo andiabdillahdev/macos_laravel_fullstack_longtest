@@ -20,8 +20,13 @@
 							<!--end::Aside mobile toggle-->
 							<!--begin::Mobile logo-->
 							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-								<a href="index.html" class="d-lg-none">
+								<!-- <a href="index.html" class="d-lg-none">
 									<img alt="Logo" src="admin/assets/media/logos/logo-3.svg" class="h-30px" />
+								</a> -->
+
+
+								<a href="#">
+									<img alt="Logo" src="{{ asset('admin/assets/media/logos/logo-1-dark.svg') }}" class="h-25px logo">
 								</a>
 							</div>
 							<!--end::Mobile logo-->

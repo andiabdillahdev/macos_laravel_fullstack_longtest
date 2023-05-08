@@ -14,10 +14,10 @@ class HomeController extends BaseController
     }
 
     public function dashboard_admin(){
-        return view('dashboard.admin');
+        return view('module.dashboard.admin');
     }
 
     public function dashboard_user(){
-        return view('dashboard.user');
+        return view('module.dashboard.user');
     }
 }
