@@ -59,6 +59,16 @@ class MembersController extends BaseController
         return $this->sendResponse($task,'Members Updated success');
     }
 
+     public function option(){
+        $task = array();
+        try {
+            $task = $this->orderRepository->getOption();
+        } catch (\Exception $e) {
+            return $this->sendError($e->getMessage(), $e->getMessage(),400);
+        }
+        return $this->sendResponse($task,'Members fetched Success'); 
+    }
+
     public function delete(Request $request, $params){
         $task = array();
         try {

@@ -49,6 +49,16 @@ class BookController extends BaseController
         return $this->sendResponse($task,'Books Show Success'); 
     }
 
+    public function option(){
+        $task = array();
+        try {
+            $task = $this->orderRepository->getOption();
+        } catch (\Exception $e) {
+            return $this->sendError($e->getMessage(), $e->getMessage(),400);
+        }
+        return $this->sendResponse($task,'Books fetched Success'); 
+    }
+
     public function update(BooksRequest $request, $params){
         $task = array();
         try {
