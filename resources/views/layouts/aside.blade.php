@@ -19,9 +19,26 @@ $role = auth()->user()->role;
                 <a class="menu-link">
                     <span class="menu-icon">
                     </span>
+                    <span class="menu-title" style="color:#ffffff;">Buku</span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a class="menu-link">
+                    <span class="menu-icon">
+                    </span>
                     <span class="menu-title" style="color:#ffffff;">Anggota</span>
                 </a>
             </div>
+
+            <div class="menu-item">
+                <a class="menu-link">
+                    <span class="menu-icon">
+                    </span>
+                    <span class="menu-title" style="color:#ffffff;">Peminjaman buku</span>
+                </a>
+            </div>
+
         </div>
 
     </div>
